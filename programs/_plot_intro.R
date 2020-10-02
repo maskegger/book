@@ -37,7 +37,8 @@ intrograph1 <- chetty2 %>%
     geom_point(aes(color=Journal, fill=Journal), size=5, alpha=0.5, shape=21) + 
     scale_color_manual(values=darken(cbbPalette,0.3)) + scale_fill_manual(values=cbbPalette) + 
     theme_minimal_hgrid(12, rel_small=1) + 
-    geom_line(aes(color=Journal)) + 
+    scale_linetype_manual(values=c("solid","twodash","dotted","longdash")) +
+    geom_line(aes(color=Journal,linetype=Journal),size=1) + 
     theme(legend.title = element_blank(),legend.position = "none") + 
     ylab("") + xlab("") + 
     geom_label_repel(aes(label=label), cex=5, nudge_x=3,na.rm=TRUE)

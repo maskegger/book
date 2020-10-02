@@ -18,7 +18,8 @@ pkgTest <- function(x)
 }
 
 global.libraries <- c("here","knitr","bookdown","tufte","dplyr","tidyr","config","ggplot2",
-"rprojroot","memisc","forcats","kableExtra","RColorBrewer","pander","readODS") #"ggpubr"
+"rprojroot","memisc","forcats","kableExtra","RColorBrewer","pander","readODS","ggrepel",
+"cowplot","colorspace") #"ggpubr"
 
 results <- sapply(as.list(global.libraries), pkgTest)
 
